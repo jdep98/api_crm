@@ -2,12 +2,29 @@ import React from 'react'
 import { Formik, Form, Field } from 'formik'
 
 const Formulario = () => {
+
+    const handleSubmit = (valores) => {
+        console.log(valores)
+    }
+
     return (
         <div className="bg-white mt-10 px-5 py-10 rounded-md shadow-md 
         md:w-3/4 mx-auto">
             <h1 className="text-gray-600 font-bold text-xl uppercase text-center">Agregar Cliente</h1>
 
-            <Formik>
+            <Formik
+                initialValues={{
+                    nombre: '',
+                    empresa: '',
+                    email: '',
+                    telefono: '',
+                    notas: '',
+                }}
+                onSubmit={ (values) => {
+                    handleSubmit(values)
+                }}
+            >
+                {() => (
                 <Form 
                     className="mt-10"
                 >
@@ -21,6 +38,7 @@ const Formulario = () => {
                             type="text"
                             className="mt-2 block w-full p-3 bg-gray-50"
                             placeholder="Nombre del Cliente"
+                            name="nombre"
                         />
                     </div>
                     <div className="mb-4">
@@ -33,6 +51,7 @@ const Formulario = () => {
                             type="text"
                             className="mt-2 block w-full p-3 bg-gray-50"
                             placeholder="Empresa del Cliente"
+                            name="empresa"
                         />
                     </div>
 
@@ -46,6 +65,7 @@ const Formulario = () => {
                             type="email"
                             className="mt-2 block w-full p-3 bg-gray-50"
                             placeholder="Email del Cliente"
+                            name="email"
                         />
                     </div>
 
@@ -59,6 +79,7 @@ const Formulario = () => {
                             type="tel"
                             className="mt-2 block w-full p-3 bg-gray-50"
                             placeholder="Teléfono del Cliente"
+                            name="telefono"
                         />
                     </div>
 
@@ -73,6 +94,7 @@ const Formulario = () => {
                             type="text"
                             className="mt-2 block w-full p-3 bg-gray-50 h-40"
                             placeholder="Notas del Cliente"
+                            name="notas"
                         />
                     </div>
 
@@ -82,6 +104,7 @@ const Formulario = () => {
                         className="mt-5 w-full bg-blue-800 p-3 text-white uppercase font-bold text-lg"
                     />
                 </Form>
+                )}
             </Formik>
         </div>
     )
