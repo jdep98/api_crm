@@ -1,3 +1,44 @@
 {
-    "clientes": []
+  "clientes": [
+    {
+      "nombre": "Juan",
+      "empresa": "Codigo Con Juan",
+      "email": "correo@correo.com",
+      "telefono": "9138981389",
+      "notas": "Cliente recomendado por otro",
+      "id": 1
+    },
+    {
+      "nombre": "Juan",
+      "empresa": "Codigo Con Juan",
+      "email": "correo@correo.com",
+      "telefono": "9138981389",
+      "notas": "Cliente recomendado por otro",
+      "id": 2
+    },
+    {
+      "nombre": "Juan",
+      "empresa": "Codigo Con Juan",
+      "email": "correo@correo.com",
+      "telefono": "9138981389",
+      "notas": "Cliente recomendado por otro",
+      "id": 3
+    },
+    {
+      "nombre": "Karen",
+      "empresa": "Karen Diseño",
+      "email": "karen@karen.com",
+      "telefono": "108398139813",
+      "notas": "Karen esta cotizando toner",
+      "id": 4
+    },
+    {
+      "nombre": "Paulina",
+      "empresa": "Paulina Construcciones",
+      "email": "correo@correo.com",
+      "telefono": "1989389183",
+      "notas": "",
+      "id": 5
+    }
+  ]
 }
