@@ -53,15 +53,15 @@ const Formulario = ({cliente}) => {
 
             <Formik
                 initialValues={{
-                    nombre: '',
-                    empresa: '',
-                    email: '',
-                    telefono: '',
-                    notas: '',
+                    nombre: cliente?.nombre ?? "",
+                    empresa: cliente?.empresa ?? "",
+                    email: cliente?.email ?? "",
+                    telefono: cliente?.telefono ?? "",
+                    notas: cliente?.notas ?? "",
                 }}
+                enableReinitialize={true}
                 onSubmit={ async (values, {resetForm}) => {
                     await handleSubmit(values)
-
                     resetForm()
                 }}
                 validationSchema={nuevoClienteSchema}
@@ -168,6 +168,10 @@ const Formulario = ({cliente}) => {
             </Formik>
         </div>
     )
+}
+
+Formulario.defaultProps = {
+    cliente: {}
 }
 
 export default Formulario
