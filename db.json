@@ -1,7 +1,7 @@
 {
   "clientes": [
     {
-      "nombre": "Juan",
+      "nombre": "Juan ACTUALIZADO!!",
       "empresa": "Codigo Con Juan",
       "email": "correo@correo.com",
       "telefono": "9138981389",
@@ -17,7 +17,7 @@
       "id": 2
     },
     {
-      "nombre": "Juan",
+      "nombre": "Pablo",
       "empresa": "Codigo Con Juan",
       "email": "correo@correo.com",
       "telefono": "9138981389",
@@ -39,6 +39,14 @@
       "telefono": "1989389183",
       "notas": "",
       "id": 5
+    },
+    {
+      "nombre": "Edgar - ACTUALIZADO",
+      "empresa": "Codigo Con Juan",
+      "email": "correo@correo.com",
+      "telefono": "129918398193",
+      "notas": "El Cliente solicita un servidor",
+      "id": 6
     }
   ]
 }
