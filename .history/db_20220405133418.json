@@ -1,0 +1,11 @@
+{
+  "clientes": [
+    {
+      "nombre": "Jesus Escorcia",
+      "nacimiento": "10-03-1998",
+      "email": "jescorciapino14@gmail.com",
+      "telefono": "129918398193",
+      "id": 1
+    }
+  ]
+}

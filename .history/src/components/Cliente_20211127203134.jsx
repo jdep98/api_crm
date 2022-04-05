@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 const Cliente = ({cliente, handleEliminar}) => {
     const navigate = useNavigate()
 
-    const { nombre, nacimiento, email, telefono, id} = cliente
+    const { nombre, empresa, email, telefono, notas, id} = cliente
 
     return (
         <tr className="border-b hover:bg-gray-50">
@@ -12,7 +12,7 @@ const Cliente = ({cliente, handleEliminar}) => {
                 <p><span className="text-gray-800 uppercase font-bold">Email: </span> {email} </p>
                 <p><span className="text-gray-800 uppercase font-bold">Tel: </span> {telefono} </p>
             </td>
-            <td className="p-3">{nacimiento}</td>
+            <td className="p-3">{empresa}</td>
             <td className="p-3">
 
                 <button 

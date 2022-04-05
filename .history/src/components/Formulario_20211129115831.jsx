@@ -14,8 +14,8 @@ const Formulario = ({cliente, cargando}) => {
                     .min(3, 'El Nombre es muy corto')
                     .max(20, 'El Nombre es muy largo')
                     .required('El Nombre del Cliente es Obligatorio'),
-        nacimiento: Yup.string()
-                    .required('La fecha de nacimiento es obligatorio'),
+        empresa: Yup.string()
+                    .required('El Nombre de la empresa es obligatorio'),
         email: Yup.string()
                     .email('Email no válido')
                     .required('El email es obligatorio'),
@@ -68,9 +68,10 @@ const Formulario = ({cliente, cargando}) => {
                 <Formik
                     initialValues={{
                         nombre: cliente?.nombre ?? "",
+                        empresa: cliente?.empresa ?? "",
+                        email: cliente?.email ?? "",
                         telefono: cliente?.telefono ?? "",
-                        nacimiento: cliente?.nacimiento ?? "",
-                        email: cliente?.email ?? "",                        
+                        notas: cliente?.notas ?? "",
                     }}
                     enableReinitialize={true}
                     onSubmit={ async (values, {resetForm}) => {
@@ -104,18 +105,18 @@ const Formulario = ({cliente, cargando}) => {
                         <div className="mb-4">
                             <label
                                 className="text-gray-800"
-                                htmlFor="nacimiento"
-                            >Nacimiento:</label>
+                                htmlFor="empresa"
+                            >Empresa:</label>
                             <Field 
-                                id="nacimiento"
-                                type="date"
+                                id="empresa"
+                                type="text"
                                 className="mt-2 block w-full p-3 bg-gray-50"
-                                placeholder="Fecha de nacimiento"
-                                name="nacimiento"
+                                placeholder="Empresa del Cliente"
+                                name="empresa"
                             />
 
-                            {errors.nacimiento && touched.nacimiento ? (
-                                <Alerta>{errors.nacimiento}</Alerta>
+                            {errors.empresa && touched.empresa ? (
+                                <Alerta>{errors.empresa}</Alerta>
                             ) : null }
                         </div>
 
@@ -154,6 +155,21 @@ const Formulario = ({cliente, cargando}) => {
                             {errors.telefono && touched.telefono ? (
                                 <Alerta>{errors.telefono}</Alerta>
                             ) : null }
+                        </div>
+
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="notas"
+                            >Notas:</label>
+                            <Field 
+                                as="textarea"
+                                id="notas"
+                                type="text"
+                                className="mt-2 block w-full p-3 bg-gray-50 h-40"
+                                placeholder="Notas del Cliente"
+                                name="notas"
+                            />
                         </div>
 
                         <input

@@ -71,6 +71,7 @@ const Formulario = ({cliente, cargando}) => {
                         telefono: cliente?.telefono ?? "",
                         nacimiento: cliente?.nacimiento ?? "",
                         email: cliente?.email ?? "",                        
+                        notas: cliente?.notas ?? "",
                     }}
                     enableReinitialize={true}
                     onSubmit={ async (values, {resetForm}) => {
@@ -154,6 +155,21 @@ const Formulario = ({cliente, cargando}) => {
                             {errors.telefono && touched.telefono ? (
                                 <Alerta>{errors.telefono}</Alerta>
                             ) : null }
+                        </div>
+
+                        <div className="mb-4">
+                            <label
+                                className="text-gray-800"
+                                htmlFor="notas"
+                            >Notas:</label>
+                            <Field 
+                                as="textarea"
+                                id="notas"
+                                type="text"
+                                className="mt-2 block w-full p-3 bg-gray-50 h-40"
+                                placeholder="Notas del Cliente"
+                                name="notas"
+                            />
                         </div>
 
                         <input

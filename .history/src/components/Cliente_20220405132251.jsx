@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 const Cliente = ({cliente, handleEliminar}) => {
     const navigate = useNavigate()
 
-    const { nombre, nacimiento, email, telefono, id} = cliente
+    const { nombre, nacimiento, email, telefono, notas, id} = cliente
 
     return (
         <tr className="border-b hover:bg-gray-50">

@@ -1,28 +1,11 @@
 {
   "clientes": [
     {
-      "nombre": "Juan ACTUALIZADO!!",
-      "empresa": "Codigo Con Juan",
-      "email": "correo@correo.com",
-      "telefono": "9138981389",
-      "notas": "Cliente recomendado por otro",
-      "id": 1
-    },
-    {
-      "nombre": "Paulina",
-      "empresa": "Paulina Construcciones",
-      "email": "correo@correo.com",
-      "telefono": "1989389183",
-      "notas": "",
-      "id": 5
-    },
-    {
-      "nombre": "Edgar - ACTUALIZADO",
-      "empresa": "Codigo Con Juan",
-      "email": "correo@correo.com",
-      "telefono": "129918398193",
-      "notas": "El Cliente solicita un servidor",
-      "id": 6
+      "nombre": "Prueba Prueba",
+      "telefono": "123456789",
+      "nacimiento": "1998-10-03",
+      "email": "jescorciapino14@gmail.com",
+      "id": 2
     }
   ]
 }

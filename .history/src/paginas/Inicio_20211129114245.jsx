@@ -50,7 +50,7 @@ const Inicio = () => {
                     <tr>
                         <th className="p-2">Nombre</th>
                         <th className="p-2">Contacto</th>
-                        <th className="p-2">Nacimiento</th>
+                        <th className="p-2">Empresa</th>
                         <th className="p-2">Acciones</th>
                     </tr>
                 </thead>

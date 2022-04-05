@@ -52,10 +52,16 @@ const VerCliente = () => {
                             {cliente.telefono}
                         </p>
                     )}
-                    {cliente.nacimiento && (
+                    {cliente.empresa && (
                         <p className="text-2xl text-gray-600 mt-4">
-                            <span className="text-gray-800 uppercase font-bold">Nacimiento: </span>
-                            {cliente.nacimiento}
+                            <span className="text-gray-800 uppercase font-bold">Empresa: </span>
+                            {cliente.empresa}
+                        </p>
+                    )}
+                    {cliente.notas && (
+                        <p className="text-2xl text-gray-600 mt-4">
+                            <span className="text-gray-800 uppercase font-bold">Notas: </span>
+                            {cliente.notas}
                         </p>
                     )}
 
